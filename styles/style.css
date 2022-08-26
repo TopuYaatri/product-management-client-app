@@ -1,0 +1,7 @@
+.product-table table, th, tr, td {
+  border: 1px solid black;
+}
+
+.product-table {
+  width: 100%;
+}
