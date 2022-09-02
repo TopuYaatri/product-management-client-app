@@ -28,7 +28,7 @@ function editRow(er) {
 
 
 
-function saveChange(sr) {
+function saveChange(sr) { 
   let indexOfRow = sr.parentNode.parentNode.rowIndex;
   let roEdit = document.getElementById('product-table').rows[indexOfRow];
   let cell0Edit = roEdit.cells[0];
@@ -36,7 +36,11 @@ function saveChange(sr) {
   let cell2Edit = roEdit.cells[2];
   let cell3Edit = roEdit.cells[3];
 
-
+  console.log (cell1Edit.innerHTML, cell1Edit.innerText);
+  if (cell1Edit.innerText === ""){
+    alert ("Please dont keep any field empty");
+    return;
+  }
   if (cell3Edit.innerHTML === "yes" || cell3Edit.innerHTML === "Yes" ||
     cell3Edit.innerHTML === "YES" || cell3Edit.innerHTML === "no" ||
     cell3Edit.innerHTML === "No" || cell3Edit.innerHTML === "NO") {
@@ -47,6 +51,7 @@ function saveChange(sr) {
       price: cell2Edit.innerHTML,
       inStock: (cell3Edit.innerHTML === 'yes'),
     }
+  
 
     products.splice(indexOfRow - 1, 1, product);
     let dis = document.forms["form"]["submit"];
