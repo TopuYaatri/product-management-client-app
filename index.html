@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Product Management App</title>
-    <link rel="stylesheet" href="./styles/style.css"/>
-  </head>
-  <body>
-    <h1>Project Management App</h1>
-    <table class="product-table" id="product-table">
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>In Stock</th>
-        <th colspan="2">Actions</th>
-      </tr>
-    </table>
-    <script src="./scripts/script.js"></script>
-  </body>
+
+<head>
+  <title>Product Management App</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body id="body">
+  <h1>Project Management App</h1>
+
+
+  <table class="product-table" id="product-table">
+    <tr class="head" id="head">
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>In Stock</th>
+      <th colspan="2">Actions</th>
+    </tr>
+  </table><br><br>
+
+  <h2>Enter details</h2>
+  <form class="myForm" name="myForm" id="form">
+
+    <label for="id">ID:</label><br>
+    <input type="text" id="id" name="id" maxlength="8"><br>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" maxlength="20"><br>
+    <label for="price">Price:</label><br>
+    <input type="text" id="price" name="Price" maxlength="8"><br>
+
+    <p>Stock status </p>
+    <input type="radio" name="instock" value="true" checked><label for="instock">in stock</label><br>
+    <input type="radio" name="instock" value="false "><label for="outOfStock">out of Stock</label><br><br>
+    <input type="button" id="submit" value="Submit" onclick="addProduct()">
+    <input type="button" value="Reset" onclick="resetForm()">
+  </form>
+
+  <p id="test"></p>
+  <script src="./scripts/script.js"></script>
+</body>
+
 </html>
