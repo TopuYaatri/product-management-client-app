@@ -1,7 +1,43 @@
-.product-table table, th, tr, td {
+.product-table table,
+th,
+tr,
+td {
+
   border: 1px solid black;
+
 }
 
+#body h1 {
+  padding-top: 50px;
+  padding-left: 300px;
+}
+
+
 .product-table {
-  width: 100%;
+  width: 1100px;
+  padding-left: 20px;
+}
+
+.myForm {
+  position: fixed;
+  top: 130px;
+  ;
+  margin-left: 78%;
+  background-color: gray;
+  width: 200px;
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 40px;
+}
+
+h2 {
+  margin-left: 1180px;
+  position: fixed;
+  top: 110px;
+}
+
+div {
+
+  background-color: blue;
 }
